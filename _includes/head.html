@@ -6,15 +6,25 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
+  {%- include google-analytics.html -%}
   {%- endif -%}
-
+  
   <!-- highlight.js support -->
   <link rel="stylesheet" href="{{ site.baseurl }}/js/highlightjs/styles/dracula.min.css">
-
+  
   <script type="text/javascript" src="{{ site.baseurl }}/js/highlightjs/highlight.min.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/js/highlightjs/languages/csharp.min.js"></script>
-
+  
   <script type="text/javascript"> hljs.highlightAll(); </script>
   <!-- end highlight.js support -->
+  
+  <!-- dark reader -->
+  <script type="text/javascript">
+    DarkReader.enable({
+      brightness: 100,
+      contrast: 90,
+      sepia: 10
+    });
+  </script>
+  <!-- end dark reader -->
 </head>
