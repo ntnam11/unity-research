@@ -30,7 +30,7 @@ If your mesh was exported correctly with Armature (Blender) or Animation Control
 
 These empty GameObjects form a bone structure, which will be referenced by our Skinned Mesh. Unity allows setting bones with [`SkinnedMeshRenderer.bones`](https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer-bones.html). In C# we'll do it like this:
 
-```c#
+```csharp
 Transform[] bones;
 // getting transforms
 // ...
@@ -58,7 +58,7 @@ With this bone structure:
 <img class="image" src="{{ site.baseurl }}/images/2024-03-14-sample-bone-structure.png" alt="Sample Bone Structure" />
 
 and a little bit of code:
-```c#
+```csharp
 [MenuItem("GameObject/Create Avatar", false, 1000)]
 public static void CreateAvatar()
 {
@@ -82,7 +82,7 @@ Having only the bone system for our Skinned Mesh isn't enough. Our mesh needs `b
 
 Since the `bindposes` is defined for each bones, we need to set a `Matrix4x4[]`, with its length equals to the number of available bones. In other words:
 
-```c#
+```csharp
 Matrix4x4[] bindPoses = new Matrix4x4[bones.Length];
 for (int i = 0; i < bones.Length; i++)
 {
@@ -113,7 +113,7 @@ This table summaries 2 methods can be used to handle bone weights.
 \* *This method is used to avoid allocating a new array with every access. In simple terms, every time you use `Mesh.boneWeights`, Unity has to allocate a new array, therefore it's slower and consumes more memory.*
 
 Example: What's inside bone weight struct:
-```c#
+```csharp
 Transform[] bones;
 
 // by definition
@@ -147,7 +147,7 @@ Unity provided a really convenient method for combining meshes: (`Mesh.CombineMe
 
 Usually we'll use it in combination with `CombineInstance[]`, in which we define which mesh to combine.
 
-```c#
+```csharp
 Mesh[] meshes;
 // setting meshes
 // ...
@@ -173,7 +173,7 @@ Unity stores materials following submeshes inside a mesh. In another words, each
 
 Depends on your needs, there are multiple ways to combine submeshes (for example, combine submesh index `0` of the first mesh with submesh index `1` of the second mesh, etc.). Material slots of combined mesh will be defined this way.
 
-```c#
+```csharp
 // getting submesh
 SubMeshDescriptor subMeshDescriptor = mesh.GetSubMesh(i);
 
@@ -191,7 +191,7 @@ In Blender, blendshapes are Shape Keys, while in 3dsMax it's Morpher Modifier.
 
 This is a template for getting/setting blendshapes
 
-```c#
+```csharp
 // Getting BlendShapes data
 for (int i = 0; i < mesh.blendShapeCount; i++)
 {
