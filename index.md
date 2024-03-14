@@ -1,5 +1,5 @@
-Here you can say lots of fun things about your site.
+Hi! I'm Sora.
 
-Maybe say a some things about yourself.
+I write stuffs here.
 
-Or maybe what you plan to blog about.
+Have fun reading!
