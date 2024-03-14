@@ -41,7 +41,3 @@ defaults:
       type: post
     values:
       tags: Other
-  - scope:
-      path: "images"
-    values:
-      image: true

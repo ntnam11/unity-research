@@ -55,7 +55,7 @@ Example:
 
 With this bone structure:
 
-![Sample Bone Structure](/images/2024-03-14-sample-bone-structure.png)
+<img class="image" src="{{ site.baseurl }}/images/2024-03-14-sample-bone-structure.png" alt="Sample Bone Structure" />
 
 and a little bit of code:
 ```c#
@@ -74,7 +74,7 @@ public static void CreateAvatar()
 
 we got this avatar ready for our skinned mesh combination:
 
-![Sample New Avatar](/images/2024-03-14-sample-new-avatar.png)
+<img class="image" src="{{ site.baseurl }}/images/2024-03-14-sample-bone-structure.png" alt="Sample New Avatar" />
 
 #### Bindposes
 
